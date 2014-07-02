@@ -1,3 +1,9 @@
+#Diff with upstream
+* Rename GET, POST... to Get, Post...
+* Rename Get, Set to GetValue, SetValue
+* Move Template from Engine to Context
+* Add Redirect method
+
 #Gin Web Framework
 Gin is a web framework written in Golang. It features a martini-like API with much better performance, up to 40 times faster. If you need performance and good productivity, you will love Gin.  
 [Check out the official web site](http://gin-gonic.github.io/gin/)
