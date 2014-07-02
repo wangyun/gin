@@ -1,6 +1,4 @@
 #Diff with upstream
-* Rename GET, POST... to Get, Post...
-* Rename Get, Set to GetValue, SetValue
 * Move Template from Engine to Context
 * Add Redirect method
 

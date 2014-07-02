@@ -166,27 +166,27 @@ func (group *RouterGroup) Handle(method, p string, handlers []HandlerFunc) {
 }
 
 // POST is a shortcut for router.Handle("POST", path, handle)
-func (group *RouterGroup) Post(path string, handlers ...HandlerFunc) {
+func (group *RouterGroup) POST(path string, handlers ...HandlerFunc) {
 	group.Handle("POST", path, handlers)
 }
 
 // GET is a shortcut for router.Handle("GET", path, handle)
-func (group *RouterGroup) Get(path string, handlers ...HandlerFunc) {
+func (group *RouterGroup) GET(path string, handlers ...HandlerFunc) {
 	group.Handle("GET", path, handlers)
 }
 
 // DELETE is a shortcut for router.Handle("DELETE", path, handle)
-func (group *RouterGroup) Delete(path string, handlers ...HandlerFunc) {
+func (group *RouterGroup) DELETE(path string, handlers ...HandlerFunc) {
 	group.Handle("DELETE", path, handlers)
 }
 
 // PATCH is a shortcut for router.Handle("PATCH", path, handle)
-func (group *RouterGroup) Patch(path string, handlers ...HandlerFunc) {
+func (group *RouterGroup) PATCH(path string, handlers ...HandlerFunc) {
 	group.Handle("PATCH", path, handlers)
 }
 
 // PUT is a shortcut for router.Handle("PUT", path, handle)
-func (group *RouterGroup) Put(path string, handlers ...HandlerFunc) {
+func (group *RouterGroup) PUT(path string, handlers ...HandlerFunc) {
 	group.Handle("PUT", path, handlers)
 }
 
@@ -253,7 +253,7 @@ func (c *Context) Error(err error, meta interface{}) {
 
 // Sets a new pair key/value just for the specefied context.
 // It also lazy initializes the hashmap
-func (c *Context) SetValue(key string, item interface{}) {
+func (c *Context) Set(key string, item interface{}) {
 	if c.Keys == nil {
 		c.Keys = make(map[string]interface{})
 	}
@@ -262,7 +262,7 @@ func (c *Context) SetValue(key string, item interface{}) {
 
 // Returns the value for the given key.
 // It panics if the value doesn't exist.
-func (c *Context) GetValue(key string) interface{} {
+func (c *Context) Get(key string) interface{} {
 	var ok bool
 	var item interface{}
 	if c.Keys != nil {
