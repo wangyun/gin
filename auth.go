@@ -87,7 +87,7 @@ func BasicAuth(accounts Accounts) HandlerFunc {
 		} else {
 			// user is allowed, set UserId to key "user" in this context, the userId can be read later using
 			// c.Get(gin.AuthUserKey)
-			c.Set(AuthUserKey, user)
+			c.SetValue(AuthUserKey, user)
 		}
 	}
 }
